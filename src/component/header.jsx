@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoCarSportSharp } from "react-icons/io5";
-import "./Header.css";
+import "./header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
