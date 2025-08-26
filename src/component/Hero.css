@@ -146,7 +146,7 @@ html, body {
   }
 
   .hero-content {
-    margin-top: -100px; /* less negative margin so content isn’t pushed too high */
+    margin-top: -200px; /* less negative margin so content isn’t pushed too high */
     padding: 0 0.5rem;
   }
 

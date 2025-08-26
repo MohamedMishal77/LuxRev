@@ -11,7 +11,8 @@ html, body {
 .luxrev-header {
   width: 90%;
   max-width: 1200px;
-
+  z-index: 1000;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,23 +96,32 @@ html, body {
   .luxrev-header {
     width: 80%;
   }
+ /* Mobile */
+@media (max-width: 768px) {
   .nav-menu {
     position: absolute;
-    top: 70px;
-    right: 20px;
+     top: 120%;   /* directly below header */
+    right: 0;
+        /* span full width under header */
+    margin: 0 auto;
+    width: 100px;       /* 👈 adjust as you like */
+    max-width: 30vw; 
     flex-direction: column;
     gap: 20px;
     background: rgba(20, 20, 20, 0.95);
     padding: 20px;
     border-radius: 15px;
-    display: none;
+    display: none; /* hidden by default */
+    z-index: 1500;  /* make sure it appears above hero */
   }
 
   .nav-menu.open {
-    display: flex;
+    display: flex !important;  /* force show when toggled */
   }
 
   .burger {
     display: flex;
   }
+}
+
 }
