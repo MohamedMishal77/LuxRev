@@ -3,6 +3,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  background-color: #000;   /* makes the surrounding page dark */
+}
+
+
 .luxrev-header {
   width: 90%;
   max-width: 1200px;
@@ -11,17 +16,19 @@ html {
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 35px ; /* Add margin-top for spacing from top */
+  margin-top: 35px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0%;
   padding: 15px 30px;
   border-radius: 20px;
 
-  background: rgba(20, 20, 20, 0.6);
+  background-color: #7e7a7aba;               /* 👈 ensures no washout */
+  background: rgba(85, 85, 85, 0.492);    /* glassy dark effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
 
 /* Logo */
 .logo-link {

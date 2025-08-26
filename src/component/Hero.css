@@ -6,7 +6,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000; /* fixes washed out issue */
 }
+
+.background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #000; /* ensures proper dark base */
+}
+
 
 .hero-container canvas {
   position: absolute !important;
@@ -17,15 +30,6 @@
   z-index: -1;
 }
 
-.background-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none; /* So clicks pass through */
-}
 
 /* Foreground Content */
 .hero-content {
