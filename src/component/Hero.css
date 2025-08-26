@@ -1,0 +1,160 @@
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1;
+}
+
+.background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* So clicks pass through */
+}
+
+/* Foreground Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 1rem;
+  margin-top: -180px;
+  height: 100%;
+}
+
+.hero-title {
+  margin-top: 0; /* Remove extra margin */
+  margin-bottom: 0.75rem; /* Golden ratio spacing */
+  font-size: 4.236rem; /* 68px, golden ratio from 42px */
+  font-weight: 680;
+  letter-spacing: 1.5px;
+  line-height: 1.15;
+}
+
+.hero-tagline {
+  margin-bottom: 1.1rem; /* Golden ratio spacing */
+  font-size: 2.25rem; /* 42px, golden ratio from 26px */
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.1rem; /* Golden ratio from 0.68rem */
+  margin-top: 0.5rem; /* Reduced gap */
+}
+
+.btn {
+  padding: 0.618rem 1.618rem; /* Golden ratio padding */
+  border-radius: 999px;
+  font-size: 1rem; /* 26px, golden ratio from 16px */
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background:transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn.primary:hover {
+  background: #e6bc74;
+}
+
+.btn.outline {
+  background: transparent;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border: 1px solid #fff;
+  transition: all 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+.btn.outline:hover {
+   background:none;
+   transform: translateY(-1px) scale(1.04);
+}
+
+.shiny-tagline {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.shiny-btn {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Optional: Ensure html/body fill the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* In your header.css or global CSS */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  background: transparent; /* or semi-transparent */
+}
+
+/* Responsive fixes for very small screens */
+@media (max-width: 540px) {
+  .hero-title {
+    font-size: 2rem; /* scale down from 4.2rem */
+    line-height: 1.2;
+  }
+
+  .hero-tagline {
+    font-size: 1.25rem; /* scale down from 2.25rem */
+    line-height: 1.3;
+  }
+
+  .hero-content {
+    margin-top: -100px; /* less negative margin so content isn’t pushed too high */
+    padding: 0 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* stack buttons vertically if space is tight */
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%; /* buttons take full width for readability */
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

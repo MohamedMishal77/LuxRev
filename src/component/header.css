@@ -1,0 +1,110 @@
+/* Smooth scroll for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+.luxrev-header {
+  width: 90%;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 35px ; /* Add margin-top for spacing from top */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0%;
+  padding: 15px 30px;
+  border-radius: 20px;
+
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 20.5px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.logo-link:hover .logo-text {
+  color: #d4af37;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #d4af37;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .luxrev-header {
+    width: 80%;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}

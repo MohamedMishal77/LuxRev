@@ -1,0 +1,167 @@
+.pricing-section {
+  background: #0d0d0d;
+  padding: 6rem 1rem;
+  color: #fff;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.pricing-subtitle {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 3rem;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background: rgba(20, 20, 20, 0.92);
+  padding: 2.2rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: box-shadow 0.3s cubic-bezier(.4,2,.6,1), border 0.3s;
+  border: 1.5px solid transparent;
+  position: relative;
+  overflow: hidden;
+  will-change: box-shadow, border;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 10px 32px rgba(242, 246, 4, 0.1), 0 2px 8px rgba(162, 165, 14, 0.08);
+  border: 1.5px solid #f7f9f9;
+}
+
+.featured {
+  border: 2px solid #f7f6f16f;
+  box-shadow: 0 12px 32px rgba(243, 243, 241, 0.1);
+  z-index: 1;
+}
+
+.pricing-plan {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #f5f5f5;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pricing-desc {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  gap: 0.2rem;
+}
+
+.currency {
+  font-size: 1.3rem;
+  margin-right: 2px;
+}
+
+.amount {
+  font-size: 2.3rem;
+  color: #fff;
+}
+
+.duration {
+  font-size: 1rem;
+  color: #aaa;
+  margin-left: 4px;
+}
+
+.pricing-note {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1.2rem;
+  margin-top: 0.2rem;
+  text-align: left;
+}
+
+.benefits {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.benefits li {
+  margin-bottom: 0.6rem;
+  font-size: 0.97rem;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.benefits li svg {
+  flex-shrink: 0;
+}
+
+.pricing-btn {
+  background: rgba(244, 248, 248, 0.089);
+  color: #fff;
+  border: 1px solid #f3f6f5;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.7s cubic-bezier(.4,2,.6,1);
+  width: 100%;
+  margin-top: auto;
+  box-shadow: none;
+  outline: none;
+}
+
+.pricing-btn:hover {
+  
+  color: #eaeeee;
+  transform: translateY(-1px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card {
+    align-items: center;
+    text-align: center;
+  }
+  .pricing-plan,
+  .pricing-desc,
+  .pricing-note,
+  .benefits {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,198 @@
+.fleets-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #0d0d0d;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2vw; /* Use vw for more consistent margin on large screens */
+  gap: 0.25rem;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container for left and right */
+.fleets-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Left Text Area */
+.fleets-text {
+  flex: 1;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align left */
+  text-align: left;        /* Align text left */
+}
+
+.fleets-title {
+  font-size: 3.5rem;           /* Increased title size */
+  font-weight: 700;
+  margin-bottom: 2rem;       /* Increased gap below title */
+  background: linear-gradient(90deg, #ffd700, #e6bc74);
+  margin-top: 1px;
+  margin-left: 15px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  align-self: flex-start;
+}
+
+.fleets-description {
+  font-size: 1.1rem;
+  margin-left: 15px;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+.fleets-btn {
+  padding: 0.8rem 2rem;
+  border: 1px solid #f4f3f2 ;
+  margin-left: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  color: #fffafa;
+  cursor: pointer;
+  transition: all 0.7s cubic-bezier(.4,2,.6,1);
+  align-self: flex-start; /* Align button to left */
+}
+
+.fleets-btn:hover {
+  transform: translateY(-2px);
+  backdrop-filter: blur(10px);
+}
+
+/* Right Side Cards */
+.fleets-cards {
+  flex: 1;
+  max-width: 600px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align card to right */
+  position: relative;
+  overflow: hidden;
+}
+
+.fleets-cards > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Ensure card is at the right */
+}
+
+/* Card styling (targets CardSwap > Card) */
+.fleets-cards .card {
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 16px;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  width: 350px;
+  max-width: 100%;
+  height: 420px;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fleets-cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(255, 215, 0, 0.2);
+}
+
+/* Card title */
+.fleets-cards .card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;;
+  color: #ffd700;
+  text-align: left;
+  width: 100%;
+}
+
+.fleets-cards .card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: -10px;
+  text-align: left;
+  width: 100%;
+}
+
+.fleets-cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: -10px;      /* Push image to the bottom */
+  margin-bottom: 0;
+  display: block;
+}
+
+.car-details-wrapper {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fleets-section {
+    /* FIX: remove forced full-viewport height & spacing that creates the big gap */
+    min-height: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 4vw; /* slightly tighter on mobile */
+  }
+
+  .fleets-container {
+    flex-direction: column;
+    gap: 1rem; /* smaller gap since cards are hidden */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  /* Center the copy and remove desktop left offsets */
+  .fleets-text,
+  .fleets-title,
+  .fleets-description,
+  .fleets-btn {
+    align-items: center !important;
+    align-self: center !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+
+  /* Hide cards entirely on mobile and make sure they don't reserve space */
+  .fleets-cards {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+}
